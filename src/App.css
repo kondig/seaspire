@@ -1,0 +1,216 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  /*animation: App-logo-spin infinite 20s linear;*/
+  height: 500px;
+}
+
+.App-header {
+  background-color: white;
+  height: 500px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+.menu {
+  height: 100%;
+  border: 3px solid white;
+  vertical-align: middle;
+  background-color: #1A6D8F;
+}
+.menu li {
+  padding: 30px;
+  margin-left: 100px;
+  margin-right: 100px;
+  /*border: 1px solid black;*/
+  display: inline-block;
+  font-size: 30px;
+  color: #1A6D8F;
+}
+.menu a {
+  color: #AFBDC5;
+  text-decoration: none;
+}
+.menu a:hover {
+  text-decoration: underline;
+  /*font-weight: bold;*/
+}
+.dropdown-container {
+  display: inline-block;
+  position: relative;
+  /*cursor: pointer;*/
+}
+.dropdown-title {
+  background-color: #1A6D8F;
+  color: #AFBDC5;
+  font-size: 30px;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 400px;
+  z-index: 1;
+
+}
+.dropdown-content li {
+  display: block;
+  position: relative;
+  font-size: 30px;
+  color: #1A6D8F;
+  text-align: center;
+  padding: 10px 10px;
+  margin: 10px;
+  background-color: white;
+  cursor: pointer;
+}
+.dropdown-content ul {
+  /*position: relative;*/
+  list-style-type: none;
+  padding: 0;
+}
+.dropdown-content li:hover {
+  background-color: #AFBDC5;
+}
+.dropdown-container:hover
+.dropdown-content {
+    display: block;
+}
+
+
+.site-footer {
+  background-color: white;
+  height: 400px;
+  /*width: 100%;*/
+  padding: 20px;
+  color: #1A6D8F;
+  text-align: center;
+  bottom: 0%;
+  position: relative;
+  /*border: 1px solid black;*/
+}
+h3 {
+  font-size: 20px;
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  /*bottom: 10%;*/
+  text-align: left;
+}
+h4 {
+  font-size: 20px;
+  position: absolute;
+  left: 10%;
+  bottom: 15%;
+}
+h5 {
+  font-size: 20px;
+  color: #AFBDC5;
+}
+.site-footer img {
+  height: 250px;
+  position: absolute;
+  left: 20%;
+  top: 0%;
+}
+a.linkedin {
+  height: 80px;
+  width: 80px;
+  color: transparent;
+  background-image: url('./images/linkedin_logo.png');
+  background-size:cover;
+  /*display:inline-flex;*/
+  cursor: pointer;
+  position: absolute;
+  margin-left: -20px;
+  top: 80%;
+  left: 20%;
+}
+.site-page {
+  height: 3000px;
+  padding: 20px;
+  background-size: cover;
+  border: 3px solid white;
+  border-top: 0px solid white;
+}
+.fleet {
+  min-height: 900px;
+  background-image: url('./images/fleet_test.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #AFBDC5;
+  font-size: 50px;
+}
+/*.fleet_pic {
+  background-size: cover;
+  width: 100%;
+  border: 3px solid black;
+}*/
+.fleet_text {
+  background-color: #1A6D8F;
+  height: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.fleet_text strong {
+  font-weight: bold;
+  font-size: 25px;
+  color: #AFBDC5;
+  border: 1px solid black;
+  position: absolute;
+  left: 20%;
+  top: 10%;
+}
+.fleet_text p {
+  font-size: 20px;
+  color: #AFBDC5;
+  border: 1px solid black;
+  position: absolute;
+  left: 20%;
+  top: 15%;
+}
+.history {
+  min-height: 900px;
+  background-image: url('./images/ocean_main.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.history_text {
+  background-color: #1A6D8F;
+  height: 400px;
+  width: 100%;
+  position: relative;
+}
+.history_text strong {
+  font-weight: bold;
+  font-size: 25px;
+  color: #AFBDC5;
+  border: 1px solid black;
+  position: absolute;
+  left: 20%;
+  top: 10%;
+}
+.history_text p {
+  font-size: 20px;
+  color: #AFBDC5;
+  border: 1px solid black;
+  position: absolute;
+  left: 20%;
+  top: 15%;
+}
