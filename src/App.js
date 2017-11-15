@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import logo from './images/SeaSpire_logo.png';
+
 import {Dropdown} from './components/dropdown';
 
 class App extends Component {
@@ -11,17 +12,21 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <div className="mainlogo">
+          </div>
+          <div className="menu">
+            <ul>
+              <li> <Dropdown listname={"FLEET"} listItems={stolos} /> </li>
+              <li> <a href='#identifier2'>ABOUT US</a> </li>
+              <li> <a href='#History'>HISTORY</a> </li>
+              <li> <a href='./contact.js'>CONTACT</a> </li>
+            </ul>
+          </div>
+          <div className="mainpic">
+          </div>
         </header>
 
-        <div className="menu">
-          <ul>
-            <li> <Dropdown listname={"FLEET"} listItems={stolos} /> </li>
-            <li> <a href='#identifier2'>ABOUT US</a> </li>
-            <li> <a href='#History'>HISTORY</a> </li>
-            <li> <a href='#identifier4'>CONTACT</a> </li>
-          </ul>
-        </div>
+
 
         <div className="site-page">
           <div className="fleet" id="identifier1"> </div>
@@ -33,6 +38,11 @@ class App extends Component {
           <div className="history" id="History"> </div>
           <section className="history_text">
               <strong> Seaspire Maritime Timeline </strong>
+              <p> Seaspire Maritime is committed to providing ship management services of the highest quality while adding value to our stakeholders, our people and the society. </p>
+          </section>
+          <div className="other" id="other"> </div>
+          <section className="other_text">
+              <strong> News </strong>
               <p> Seaspire Maritime is committed to providing ship management services of the highest quality while adding value to our stakeholders, our people and the society. </p>
           </section>
         </div>
