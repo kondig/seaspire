@@ -6,6 +6,7 @@
   display: inline;
   width: 100%;
   height: 400px;
+  /*margin: 0px 0px 0px 0px;*/
 }
 /*.App-logo {
   float: left;
@@ -15,38 +16,43 @@
 }*/
 .mainlogo {
   float: left;
-  border: 2px solid black;
+  /*border: 2px solid black;*/
   background-image: url('./images/SeaSpire_logo2.png');
   background-size: contain;
   background-repeat: no-repeat;
+  position: absolute;
+  left: 10%;
+  top: 3%;
   /*background-color: white;*/
   padding: 0px 0px 0px 0px;
+  /*margin-bottom: 30px;*/
   height: 400px;
   width: 200px;
 }
 .menu {
   width: 100%;
   height: 400px;
+  /*background-image: url('./images/sea_menu2.jpg');7
+  background-size: contain;
+  background-repeat: no-repeat;*/
   /*background-color: #1A6D8F;*/
-  /*border: 3px solid white;*/
-  /*display: flex;
-  align-items: center;
-  justify-content: center;*/
-  text-align: center;
+  /*border: 3px solid black;*/
   vertical-align: middle;
 }
 .menu li {
   /*padding: 30px;*/
   margin-left: 100px;
   margin-right: 100px;
-  padding-top: 50px;
+  padding-top: 150px;
   /*border: 1px solid black;*/
   display: inline-block;
-  font-size: 30px;
+  font-size: 35px;
   color: #1A6D8F;
+  position: relative;
+  left: 10%;
 }
 .menu a {
-  color: #AFBDC5;
+  color: #1A6D8F;
   text-decoration: none;
 }
 .menu a:hover {

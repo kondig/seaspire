@@ -16,10 +16,11 @@ class App extends Component {
           </div>
           <div className="menu">
             <ul>
-              <li> <Dropdown listname={"FLEET"} listItems={stolos} /> </li>
-              <li> <a href='#identifier2'>ABOUT US</a> </li>
+              <li> <a href='#identifier1'>ABOUT US</a> </li>
+              <li> <a href='#identifier2'>FLEET</a> </li>
               <li> <a href='#History'>HISTORY</a> </li>
-              <li> <a href='./contact.js'>CONTACT</a> </li>
+              <li> <a href='#contact'>CONTACT</a> </li>
+              <li> <a href='services'>SERVICES</a> </li>
             </ul>
           </div>
           <div className="mainpic">
@@ -40,16 +41,16 @@ class App extends Component {
               <strong> Seaspire Maritime Timeline </strong>
               <p> Seaspire Maritime is committed to providing ship management services of the highest quality while adding value to our stakeholders, our people and the society. </p>
           </section>
-          <div className="other" id="other"> </div>
+          <div className="other" > </div>
           <section className="other_text">
               <strong> News </strong>
               <p> Seaspire Maritime is committed to providing ship management services of the highest quality while adding value to our stakeholders, our people and the society. </p>
           </section>
         </div>
 
-        <div className="site-footer">
+        <div className="site-footer" id="contact" >
           <img src={logo} alt="footer-logo" className="footer-logo" />
-          <h3> Piraeus, Attiki, Greece <br/><br/> Phone: +30 210 1001001 <br/><br/> e-mail: ouremail@seaspire.com </h3>
+          <h3> Filellinon 1-3, Piraeus, Attiki, Greece <br/><br/> Phone: +30 210 1001001 <br/><br/> e-mail: mail@seaspiremaritime.com </h3>
           <h4>  </h4>
           <a href='https://www.linkedin.com/company/seaspire-maritime/' className='linkedin'> </a>
         </div>
