@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  font-family: "Helvetica", "Times New Roman", "Tahoma";
+  font-family: "Helvetica Neue", arial, sans-serif;
 }
 .App-header {
   display: inline;
@@ -32,32 +32,70 @@
 .menu {
   width: 100%;
   height: 400px;
-  /*background-image: url('./images/sea_menu2.jpg');7
-  background-size: contain;
-  background-repeat: no-repeat;*/
-  /*background-color: #1A6D8F;*/
-  /*border: 3px solid black;*/
-  vertical-align: middle;
+  /*position: relative;*/
+}
+.menu ul {
+  /*border: 1px solid black;*/
+  display: inline-block;
+  position: relative;
+  margin: 15px 25px 15px 25px;
+  outline: none;
+  color: #1A6D8F;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 .menu li {
-  /*padding: 30px;*/
+  /*border: 1px solid black;*/
+  padding: 10px;
   margin-left: 100px;
   margin-right: 100px;
   padding-top: 150px;
-  /*border: 1px solid black;*/
+  font-weight:  400;
   display: inline-block;
   font-size: 35px;
   color: #1A6D8F;
   position: relative;
   left: 10%;
+  transition: color 3s;
 }
 .menu a {
+  /*position: relative;*/
+  display: inline-block;
   color: #1A6D8F;
   text-decoration: none;
 }
-.menu a:hover {
-  text-decoration: underline;
-  /*font-weight: bold;*/
+.menu li::before,
+.menu li::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  opacity: 0;
+  background-color: #1A6D8F;
+  /*transform: translateY(-10px);*/
+  border: 1px solid #1A6D8F;
+  transition-property: opacity, transform;
+  transition-duration: 2s, 0.2s;
+  transition-timing-function: initial, initial;
+  transition-delay: initial, initial;
+  left: 0;
+  /*box-sizing: border-box;*/
+}
+.menu li::before {
+  top: 63%;
+  transform: translateY(50px;);
+}
+.menu li::after {
+  bottom: -5%;
+  transform: translateY(-50px;);
+}
+.menu li:hover::before {
+  opacity: 1;
+  transform: translateY(20px);
+}
+.menu li:hover::after {
+  opacity: 1;
+  transform: translateY(-20px);
 }
 .mainpic {
   background-image: url('./images/saronic.jpg');
@@ -114,8 +152,9 @@
 
 
 .site-footer {
-  background-color: white;
-  height: 400px;
+  background-color: #AFBDC5;
+  /*background-color: grey;*/
+  height: 500px;
   /*width: 100%;*/
   padding: 20px;
   color: #1A6D8F;
@@ -141,35 +180,78 @@ h4 {
 h5 {
   font-size: 20px;
   color: #AFBDC5;
+  line-height: 5px;
 }
 .site-footer img {
   height: 250px;
   position: absolute;
   left: 20%;
   top: 0%;
+  /*border: 1px solid black;*/
 }
 a.linkedin {
-  height: 80px;
-  width: 80px;
-  color: transparent;
-  background-image: url('./images/linkedin_logo.png');
-  background-size:cover;
-  /*display:inline-flex;*/
+  /*border: 1px solid black;*/
+  color: #1A6D8F;
+  background-color: #AFBDC5;
   cursor: pointer;
   position: absolute;
-  margin-left: -20px;
-  top: 80%;
-  left: 20%;
+  height: 75px;
+  width: 70px;
+  text-decoration: none;
+  padding: 0px 0px;
+
 }
 .site-page {
-  height: 3800px;
-  padding: 20px;
+  height: 5400px;
+  /*padding: 20px;*/
   background-size: cover;
-  border: 3px solid white;
+  /*border: 3px solid white;*/
   border-top: 0px solid white;
 }
+.about {
+  min-height: 700px;
+  background-image: url('./images/shipyard.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.about_text {
+  background-color: #1A6D8F;
+  height: 650px;
+  width: 100%;
+  position: relative;
+}
+.about_text strong {
+  /*border: 1px solid black;*/
+  font-weight: bold;
+  font-size: 25px;
+  color: #AFBDC5;
+  position: absolute;
+  left: 20%;
+  top: 10%;
+}
+.about_text p {
+  /*border: 1px solid black;*/
+  font-size: 20px;
+  color: #AFBDC5;
+  position: absolute;
+  left: 20%;
+  top: 15%;
+}
+.about_title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 0.2em;
+}
 .fleet {
-  min-height: 900px;
+  min-height: 700px;
   background-image: url('./images/fleet_test.jpg');
   background-attachment: fixed;
   background-position: center;
@@ -177,6 +259,7 @@ a.linkedin {
   background-size: cover;
   color: #AFBDC5;
   font-size: 50px;
+  width: 100%;
 }
 /*.fleet_pic {
   background-size: cover;
@@ -185,61 +268,62 @@ a.linkedin {
 }*/
 .fleet_text {
   background-color: #1A6D8F;
-  height: 400px;
+  height: 650px;
   width: 100%;
   position: relative;
 }
 
 .fleet_text strong {
+  /*border: 1px solid black;*/
   font-weight: bold;
   font-size: 25px;
   color: #AFBDC5;
-  border: 1px solid black;
   position: absolute;
   left: 20%;
   top: 10%;
 }
 .fleet_text p {
+  /*border: 1px solid black;*/
   font-size: 20px;
   color: #AFBDC5;
-  border: 1px solid black;
   position: absolute;
   left: 20%;
   top: 15%;
 }
-.history {
-  min-height: 900px;
+.services {
+  min-height: 700px;
   background-image: url('./images/ocean_main.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.history_text {
+.services_text {
   background-color: #1A6D8F;
-  height: 400px;
+  height: 650px;
   width: 100%;
   position: relative;
 }
-.history_text strong {
+.services_text strong {
+  /*border: 1px solid black;*/
   font-weight: bold;
   font-size: 25px;
   color: #AFBDC5;
-  border: 1px solid black;
+
   position: absolute;
   left: 20%;
   top: 10%;
 }
-.history_text p {
+.services_text p {
+  /*border: 1px solid black;*/
   font-size: 20px;
   color: #AFBDC5;
-  border: 1px solid black;
   position: absolute;
   left: 20%;
   top: 15%;
 }
 .other {
-  min-height: 800px;
+  min-height: 700px;
   background-image: url('./images/shipfront.jpg');
   background-attachment: fixed;
   background-position: center;
@@ -248,7 +332,7 @@ a.linkedin {
 }
 .other_text {
   background-color: #1A6D8F;
-  height: 400px;
+  height: 650px;
   width: 100%;
   position: relative;
 }
