@@ -25,9 +25,6 @@ class App extends Component {
           </div>
           <div className="mainpic">
           </div>
-          <FontAwesome className='ship' name='ship'/>
-          <FontAwesome className='flask' name='flask' size='2x' spin={false}
-          />
         </header>
 
 
@@ -64,15 +61,15 @@ class App extends Component {
           <img src={logo} alt="footer-logo" className="footer-logo" />
           <h3>
             <FontAwesome className='address' name='building'
-              size='1x' spin={false}
+              spin={false}
               style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}/> &nbsp; Filellinon 1-3, Piraeus, Attiki, Greece
             <br/><br/>
             <FontAwesome className='phone' name='phone'
-              size='1x' spin={false}
+              spin={false}
               style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}/> &nbsp; +30 210 1001001
             <br/><br/>
             <FontAwesome className='email' name='envelope-open'
-              size='1x' spin={false}
+              spin={false}
               style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}/> &nbsp; mail@seaspiremaritime.com
             <br/><br/>
             <a href='https://www.linkedin.com/company/seaspire-maritime/' className='linkedin'>

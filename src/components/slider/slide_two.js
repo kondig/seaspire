@@ -1,17 +1,25 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-let slidePic = require('./logotest.png');
+let slidePic = require('./spire2.jpg');
 
 const SlideTwo = (props) => {
   let background = {
     backgroundImage: "url(" + slidePic + ")",
     backgroundSize: 'contain',
     backgroundPosition: 'center',
-    height: '400px'
+    backgroundRepeat: 'no-repeat',
+    height: '700px'
+  }
+  let text = {
+    height: '400px',
+    backgroundColor: '#AFBDC5',
   }
   return (
-    <div className="slide"  style={background} >
-      lololo
+    <div>
+      <div className="slide"  style={background} >
+      </div>
+      <div className='slideText' style={text} >
+      </div>
     </div>
   )
 }
