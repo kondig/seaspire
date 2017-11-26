@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
 import FontAwesome from 'react-fontawesome';
+import Sticky from 'react-stickynode';
+import scrollToComponent from 'react-scroll-to-component';
 import logo from './images/SeaSpire_logo.png';
-import {Dropdown} from './components/dropdown';
+// import {Dropdown} from './components/dropdown';
 import {Slider} from './components/slider';
+
 
 
 class App extends Component {
   render() {
-    const stolos = ["Tankers", "Bulk Carriers", "Ferries"];
+    // const stolos = ["Tankers", "Bulk Carriers", "Ferries"];
     return (
       <div className="App">
         <header className="App-header">
@@ -24,6 +27,9 @@ class App extends Component {
             </ul>
           </div>
           <div className="mainpic">
+            <Sticky enabled={true} top={50} bottomBoundary={'#contact'} >
+              <FontAwesome className='scrollArrow' onClick={() => scrollToComponent(this.Fleet, {offset: 0, align: 'top', duration: 2500})} name='chevron-down' data-hover='SCROLL DOWN' spin={false} size='4x' />
+            </Sticky>
           </div>
         </header>
 
@@ -34,13 +40,13 @@ class App extends Component {
           <div className="about" id="About_Us">
             <section className="about_title" > ABOUT US </section>
           </div>
-
             <section className="about_text" >
             <strong> History </strong>
             <p> Seaspire Maritime is committed to providing ship management services of the highest quality while adding value to our stakeholders, our people and the society. </p>
           </section>
-          <div className="fleet" id="Fleet"> </div>
-          <section className="fleet_title"> </section>
+          <div className="fleet" id="Fleet" ref={(section) => {this.Fleet=section;}}>
+            <section className="fleet_title" > FLEET </section>
+          </div>
           <section className="fleet_text" >
               <strong> Our Fleet </strong>
               <p> Seaspire Maritime is committed to providing ship management services of the highest quality while adding value to our stakeholders, our people and the society. </p>

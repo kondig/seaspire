@@ -5,13 +5,13 @@ let slidePic = require('./spire2.jpg');
 const SlideTwo = (props) => {
   let background = {
     backgroundImage: "url(" + slidePic + ")",
-    backgroundSize: 'contain',
+    backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     height: '700px'
   }
   let text = {
-    height: '400px',
+    height: '600px',
     backgroundColor: '#AFBDC5',
   }
   return (

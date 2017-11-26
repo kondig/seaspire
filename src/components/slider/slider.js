@@ -20,20 +20,27 @@ class Slider extends Component {
     if (this.state.slideCounter < 1) { this.setState({ slideCounter: 3}) };
     if (this.state.slideCounter > 3) { this.setState({ slideCounter: 1}) };
   }
+  renderSlides = () => {
+    let sections = [];
+    for (let i=0; i < 3; i++) {
+      sections.push(<SlideOne key={i} />)
+    return sections
+    }
+  }
 
   render() {
-    const {  translateValue } = this.state;
+    const { slideCounter, translateValue } = this.state;
     console.log(translateValue);
     return (
-      <div className='slider' >
+      <div className='slider'>
         <div className='sliderContainer'
           style={{
-            height: '1000px',
-            transform: `translateX(${translateValue}px)`,
-            transition: 'transform 3s ease-out'}} >
-          {this.state.slideCounter === 1 ? <SlideOne  /> : null }
-          {this.state.slideCounter === 2 ? <SlideTwo  /> : null }
-          {this.state.slideCounter === 3 ? <SlideThree  /> : null }
+            height: '1300px',
+            // transform: `translateY(${translateValue}px)`,
+            transition: 'backgroundImage 2s ease-out'}} >
+          {slideCounter === 1 ? <SlideOne /> : null }
+          {slideCounter === 2 ? <SlideTwo  /> : null }
+          {slideCounter === 3 ? <SlideThree  /> : null }
         </div>
 
           <RightButton nextPic={ this.nextPic } />
@@ -56,8 +63,9 @@ class Slider extends Component {
   }
   slideWidth = () => {
     const slide = document.querySelector('.slide');
-    return slide.clientWidth;
     console.log(slide.clientWidth);
+    return slide.clientWidth;
+
 
 
   }

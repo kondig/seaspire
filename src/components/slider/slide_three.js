@@ -11,14 +11,16 @@ const SlideThree = (props) => {
     height: '700px',
   }
   let text = {
-    height: '400px',
+    height: '600px',
     backgroundColor: '#AFBDC5',
   }
   return (
-    <div>
-      <div className="slide"  style={background} >
+    <div className="slide">
+      <div style={background} >
       </div>
       <div className='slideText' style={text} >
+        <strong> New no 3 </strong>
+        <p> toxt toxt toxt text toxt </p>
       </div>
     </div>
   )
