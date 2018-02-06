@@ -15,18 +15,18 @@ class Slider extends Component {
     this.nextPic = this.nextPic.bind(this);
     this.previousPic = this.previousPic.bind(this);
   };
-  componentDidUpdate = () => {
-    console.log(this.state.slideCounter);
-    if (this.state.slideCounter < 1) { this.setState({ slideCounter: 3}) };
-    if (this.state.slideCounter > 3) { this.setState({ slideCounter: 1}) };
-  }
-  renderSlides = () => {
-    let sections = [];
-    for (let i=0; i < 3; i++) {
-      sections.push(<SlideOne key={i} />)
-    return sections
-    }
-  }
+  // componentDidUpdate = () => {
+  //   console.log(this.state.slideCounter);
+  //   if (this.state.slideCounter < 1) { this.setState({ slideCounter: 3}) };
+  //   if (this.state.slideCounter > 3) { this.setState({ slideCounter: 1}) };
+  // }
+  // renderSlides = () => {
+  //   let sections = [];
+  //   for (let i=0; i < 3; i++) {
+  //     sections.push(<SlideOne key={i} />)
+  //   return sections
+  //   }
+  // }
 
   render() {
     const { slideCounter, translateValue } = this.state;
@@ -61,14 +61,14 @@ class Slider extends Component {
       slideCounter: this.state.slideCounter - 1
     });
   }
-  slideWidth = () => {
-    const slide = document.querySelector('.slide');
-    console.log(slide.clientWidth);
-    return slide.clientWidth;
-
-
-
-  }
+  // slideWidth = () => {
+  //   const slide = document.querySelector('.slide');
+  //   console.log(slide.clientWidth);
+  //   return slide.clientWidth;
+  //
+  //
+  //
+  // }
 }
 
 export {Slider}

@@ -151,9 +151,9 @@
   position: relative;
   overflow: hidden;
   outline: none;
-  transform: translateY(1200%);
+  /* transform: translateY(1200%); */
   /*font-size: 60px;*/
-  color: white;
+  color: black;
   letter-spacing: 0.2em;
 }
 .scrollArrow:before {
