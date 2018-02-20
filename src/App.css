@@ -5,8 +5,9 @@
 .App-header {
   display: inline;
   width: 100%;
-  height: 400px;
-  /*margin: 0px 0px 0px 0px;*/
+  height: 300px;
+  margin: 0px 0px 0px 0px;
+  /* border:1px solid black; */
 }
 /*.App-logo {
   float: left;
@@ -15,46 +16,58 @@
   padding: 0px 0px 0px 0px;
 }*/
 .mainlogo {
-  /*border: 2px solid black;*/
+  /* border: 1px solid black; */
   background-image: url('./images/SeaSpire_logo2.png');
   background-size: contain;
   background-repeat: no-repeat;
-  position: absolute;
-  left: 5%;
+  position: relative;
   top: 1%;
+  vertical-align: middle;
+  /* left:50%; */
   /*background-color: white;*/
-  padding: 0px 0px 0px 0px;
+  /* padding: 0px 0px 0px 0px; */
   /*margin-bottom: 30px;*/
-  height: 400px;
-  width: 200px;
+  display: inline-block;
+  margin-top: 20px;
+  /* padding-left: 30px; */
+  height: 250px;
+  width: 145px;
 }
 .menu {
   width: 100%;
-  height: 400px;
+  height: 150px;
+  top: -40%;
+  margin: 0;
   /*position: relative;*/
+  /* border:1px solid black; */
 }
 .menu ul {
-  /*border: 1px solid black;*/
-  display: inline-block;
-  position: relative;
-  margin: 15px 25px 15px 25px;
-  outline: none;
+  /* border: 1px solid black; */
+  /* outline: none; */
   color: #1A6D8F;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  /* border: 1px solid black; */
+  display: block;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  /* left: 5%; */
+  padding: 0px 0px;
+  letter-spacing: 2px;
+  width: 100%;
 }
 .menu li {
+  color: #1A6D8F;
   /*border: 1px solid black;*/
-  padding: 10px;
-  margin-left: 100px;
-  margin-right: 100px;
-  padding-top: 150px;
+  padding: 15px;
+  /*margin-left: 100px;
+  margin-right: 100px;*/
+  /*padding-top: 150px;*/
   font-weight:  400;
   display: inline-block;
-  font-size: 35px;
-  color: #1A6D8F;
+  font-size: 16px;
   position: relative;
-  left: 10%;
+  /* left: 10%; */
   transition: color 3s;
 }
 .menu a {
@@ -72,14 +85,14 @@
   opacity: 0;
   background-color: #1A6D8F;
   /*transform: translateY(-10px);*/
-  border: 1px solid #1A6D8F;
+  border: 0.5px solid #1A6D8F;
   transition: opacity 2s;
   transition: transform 2s;
   left: 0;
   /*box-sizing: border-box;*/
 }
 .menu li::before {
-  top: 63%;
+  top: -5%;
   transform: translateY(50px;);
 }
 .menu li::after {
@@ -88,20 +101,21 @@
 }
 .menu li:hover::before {
   opacity: 1;
-  transform: translateY(20px);
+  transform: translateY(40px);
 }
 .menu li:hover::after {
   opacity: 1;
-  transform: translateY(-20px);
+  transform: translateY(-40px);
 }
 .mainpic {
   background-image: url('./images/saronic.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 900px;
+  background-attachment: local;
+  height: 500px;
   width: 100%;
-  border-top: 3px solid white;
+  /* border-top: 3px solid black; */
 }
 .dropdown-container {
   display: inline-block;
@@ -146,15 +160,18 @@
 .dropdown-content {
     display: block;
 }
+.sticky {
+  margin: 0;
+}
 .scrollArrow {
   display: inline-block;
   position: relative;
   overflow: hidden;
   outline: none;
-  transform: translateY(1200%);
+  /* transform: translateY(-100%); */
   /*font-size: 60px;*/
-  color: white;
-  letter-spacing: 0.2em;
+  color: #1A6D8F;
+  letter-spacing: 2px;
 }
 .scrollArrow:before {
   opacity: 1;
@@ -167,10 +184,26 @@
 }
 .scrollArrow:hover:before {
   opacity: 1;
-  color: white;
+  color: #1A6D8F;
   content: attr(data-hover);
-  font-size: 20px;
+  font-size: 16px;
   cursor: pointer;
+  font-family: arial;
+}
+.news-section {
+  height:50px;
+  background-color: white;
+  /* border:1px solid black; */
+  text-align: center;
+}
+.news-title {
+  position: relative;
+  left: 20%;
+  top: 20%;
+  /* top: 50%; */
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color:  #1A6D8F;
 }
 .slider {
   position: relative;
@@ -223,16 +256,17 @@
   color: #AFBDC5;
 }
 .site-footer {
-  background-color: #AFBDC5;
+  /* background-color: #AFBDC5; */
+  background-color: black;
   /*background-color: grey;*/
-  height: 500px;
+  height: 550px;
   /*width: 100%;*/
-  padding: 20px;
+  padding: 0px;
   color: #1A6D8F;
   text-align: center;
   bottom: 0%;
   position: relative;
-  /*border: 1px solid black;*/
+  /* border: 1px solid black; */
 }
 h3 {
   font-size: 20px;
@@ -253,8 +287,13 @@ h5 {
   color: #AFBDC5;
   line-height: 5px;
 }
+.footer-logo {
+  margin:0;
+  padding:0;
+  /* border:1px solid white; */
+}
 .site-footer img {
-  height: 250px;
+  height: 300px;
   position: absolute;
   left: 20%;
   top: 0%;
@@ -263,7 +302,8 @@ h5 {
 a.linkedin {
   /*border: 1px solid black;*/
   color: #1A6D8F;
-  background-color: #AFBDC5;
+  /* background-color: #AFBDC5; */
+  background-color: black;
   cursor: pointer;
   position: absolute;
   height: 75px;
@@ -310,6 +350,8 @@ a.linkedin {
   position: absolute;
   left: 20%;
   top: 15%;
+  width: 60%;
+  text-align: justify;
 }
 .about_title {
   position: absolute;
@@ -350,9 +392,10 @@ a.linkedin {
   font-weight: bold;
   font-size: 25px;
   color: #AFBDC5;
-  position: absolute;
-  left: 20%;
+  position: relative;
+  text-align: center;
   top: 10%;
+  color: black;
 }
 .fleet_text p {
   /*border: 1px solid black;*/
@@ -361,6 +404,8 @@ a.linkedin {
   position: absolute;
   left: 20%;
   top: 15%;
+  width: 60%;
+  text-align: justify;
 }
 .fleet_title {
   position: absolute;
@@ -391,10 +436,10 @@ a.linkedin {
   font-weight: bold;
   font-size: 25px;
   color: #AFBDC5;
-
-  position: absolute;
-  left: 20%;
+  position: relative;
+  text-align: center;
   top: 10%;
+  color: black;
 }
 .services_text p {
   /*border: 1px solid black;*/
@@ -403,10 +448,12 @@ a.linkedin {
   position: absolute;
   left: 20%;
   top: 15%;
+  width: 60%;
+  text-align: justify;
 }
 .other {
   min-height: 700px;
-  background-image: url('./images/shipfront.jpg');
+  background-image: url('./images/sea_menu.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -422,16 +469,66 @@ a.linkedin {
   font-weight: bold;
   font-size: 25px;
   color: #AFBDC5;
-  border: 1px solid black;
-  position: absolute;
-  left: 20%;
+  /* border: 1px solid black; */
+  position: relative;
+  text-align: center;
   top: 10%;
+  color: black;
 }
 .other_text p {
   font-size: 20px;
   color: #AFBDC5;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   position: absolute;
   left: 20%;
   top: 15%;
+  width: 60%;
+  text-align: justify;
+}
+
+@media only screen and (max-width: 600px) {
+  .menu {
+    width: 100%;
+  }
+  ul {
+    width: 100%;
+  }
+  .App {
+    width: 100%;
+  }
+  .App-Header {
+    width: 100%;
+  }
+  /* .mainlogo {
+    width: 100%;
+  } */
+  .dropdown-content {
+    width: 100%;
+  }
+  .site-page {
+    width: 100%;
+  }
+  .site-footer {
+    width: 100%;
+  }
+  .about {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .mainpic {
+    width: 100%;
+  }
+  .mainlogo {
+    /* border:1px solid black; */
+  }
+}
+@media only screen and (max-width: 400px) {
+  .emailtext,
+  .addresstext {
+    font-size:16px;
+  }
+  .mainlogo {
+    /* border:1px solid black; */
+  }
 }

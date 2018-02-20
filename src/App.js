@@ -15,8 +15,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <div className="mainlogo">
-          </div>
+          <div className="mainlogo"></div>
           <div className="menu">
             <ul>
               <li> <a href='#About_Us'>ABOUT US</a> </li>
@@ -26,16 +25,16 @@ class App extends Component {
               <li> <a href='#contact'>CONTACT</a> </li>
             </ul>
           </div>
-          <div className="mainpic">
-            <Sticky enabled={true} top={50} bottomBoundary={'#contact'} >
-              <FontAwesome className='scrollArrow' onClick={() => scrollToComponent(this.Fleet, {offset: 0, align: 'top', duration: 2500})} name='chevron-down' data-hover='SCROLL DOWN' spin={false} size='4x' />
-            </Sticky>
-          </div>
+          <Sticky enabled={true} top={50} bottomBoundary={1000} className='sticky' >
+            <FontAwesome className='scrollArrow' onClick={() => scrollToComponent(this.Fleet, {offset: 0, align: 'top', duration: 2500})} name='chevron-down' data-hover='SCROLL DOWN' spin={false} size='2x' />
+          </Sticky>
+
         </header>
 
 
-
+        <div className="mainpic"></div>
         <div className="site-page">
+        <div className="news-section"> <p className="news-title">NEWS</p></div>
           <Slider />
           <div className="about" id="About_Us">
             <section className="about_title" > ABOUT US </section>
@@ -58,7 +57,7 @@ class App extends Component {
           </section>
           <div className="other" > </div>
           <section className="other_text">
-              <strong> News </strong>
+              <strong> Some other section </strong>
               <p> Seaspire Maritime is committed to providing ship management services of the highest quality while adding value to our stakeholders, our people and the society. </p>
           </section>
         </div>
@@ -68,7 +67,7 @@ class App extends Component {
           <h3>
             <FontAwesome className='address' name='building'
               spin={false}
-              style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}/> &nbsp; Filellinon 1-3, Piraeus, Attiki, Greece
+              style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}/> &nbsp;<span className='addresstext'> Filellinon 1-3, Piraeus, Attiki, Greece </span>
             <br/><br/>
             <FontAwesome className='phone' name='phone'
               spin={false}
@@ -76,7 +75,7 @@ class App extends Component {
             <br/><br/>
             <FontAwesome className='email' name='envelope-open'
               spin={false}
-              style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}/> &nbsp; mail@seaspiremaritime.com
+              style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}/> &nbsp;<span className='emailtext'> mail@seaspiremaritime.com </span>
             <br/><br/>
             <a href='https://www.linkedin.com/company/seaspire-maritime/' className='linkedin'>
               <FontAwesome className='linkedinIcon' name='linkedin-square'
