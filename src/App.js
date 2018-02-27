@@ -3,9 +3,11 @@ import './App.css';
 import FontAwesome from 'react-fontawesome';
 import Sticky from 'react-stickynode';
 import scrollToComponent from 'react-scroll-to-component';
+import { slide as Menu} from 'react-burger-menu';
 import logo from './images/SeaSpire_logo.png';
 // import {Dropdown} from './components/dropdown';
 import {Slider} from './components/slider';
+
 
 
 
@@ -13,9 +15,17 @@ class App extends Component {
   render() {
     // const stolos = ["Tankers", "Bulk Carriers", "Ferries"];
     return (
+
       <div className="App">
+        <Menu>
+          <a id="home" className="menu-item" href="/">Home</a>
+          <a id="about" className="menu-item" href="#About_Us">About</a>
+          <a className="menu-item" href="#Fleet"><FontAwesome name='ship'/> &nbsp; Fleet</a>
+          <a className="menu-item" href="#contact">Contact</a>
+        </Menu>
         <header className="App-header">
           <div className="mainlogo"></div>
+
           <div className="menu">
             <ul>
               <li> <a href='#About_Us'>ABOUT US</a> </li>
@@ -55,7 +65,7 @@ class App extends Component {
               <strong> Seaspire Maritime Services </strong>
               <p> Seaspire Maritime is committed to providing ship management services of the highest quality while adding value to our stakeholders, our people and the society. </p>
           </section>
-          <div className="other" > </div>
+          <div className="other" id="History"> </div>
           <section className="other_text">
               <strong> Some other section </strong>
               <p> Seaspire Maritime is committed to providing ship management services of the highest quality while adding value to our stakeholders, our people and the society. </p>
