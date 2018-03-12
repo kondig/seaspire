@@ -35,14 +35,13 @@ class Slider extends Component {
       <div className='slider'>
         <div className='sliderContainer'
           style={{
-            height: '1300px',
+            height: '780px',
             // transform: `translateY(${translateValue}px)`,
             transition: 'backgroundImage 2s ease-out'}} >
           {slideCounter === 1 ? <SlideOne /> : null }
           {slideCounter === 2 ? <SlideTwo  /> : null }
           {slideCounter === 3 ? <SlideThree  /> : null }
         </div>
-
           <RightButton nextPic={ this.nextPic } />
           <LeftButton previousPic={ this.previousPic } />
       </div>

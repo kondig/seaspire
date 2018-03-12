@@ -44,31 +44,41 @@ class App extends Component {
 
         <div className="mainpic"></div>
         <div className="site-page">
-        <div className="news-section"> <p className="news-title">NEWS</p></div>
-          <Slider />
+        <div className="news-section"> <p className="news-title"></p></div>
+
           <div className="about" id="About_Us">
             <section className="about_title" > ABOUT US </section>
           </div>
-            <section className="about_text" >
-            <strong> History </strong>
-            <p> Seaspire Maritime is committed to providing ship management services of the highest quality while adding value to our stakeholders, our people and the society. </p>
-          </section>
+          <div className="about_text" >
+            <strong> About Seaspire Maritime </strong>
+            <p>
+                Seaspire is a private shipping management company focusing on bulk carriers transporting goods worldwide, based in Greece . The company is successfully managing 4 vessels since its incorporation in 2014. It provides the commercial management of the vessels and it has entered into a JV agreement with Tide Line Inc. for the technical management of the vessels.
+                <br/> <br/> <span> Vision </span> <br/>
+                Seaspire’s vision is to always be an exemplar maritime management and operating company that provides its customers with reliable, safe and efficient services. Committed to its people and shareholders, Seaspire aims to the future by further expanding its fleet and services…
+                <br/> <br/> <span>Sea-spire:</span> a slender tapering shoot/formation, a summit, a pinnacle.
+           </p>
+          </div>
           <div className="fleet" id="Fleet" ref={(section) => {this.Fleet=section;}}>
-            <section className="fleet_title" > FLEET </section>
+            <span className="fleet_title" > FLEET </span>
           </div>
           <section className="fleet_text" >
               <strong> Our Fleet </strong>
               <p> Seaspire Maritime is committed to providing ship management services of the highest quality while adding value to our stakeholders, our people and the society. </p>
           </section>
-          <div className="services" id="Services"> </div>
+          <Slider />
+          <div className="services" id="Services">
+            <span className="services_title" > SERVICES </span>
+          </div>
           <section className="services_text">
               <strong> Seaspire Maritime Services </strong>
               <p> Seaspire Maritime is committed to providing ship management services of the highest quality while adding value to our stakeholders, our people and the society. </p>
           </section>
-          <div className="other" id="History"> </div>
+          <div className="other" id="History">
+            <span className="other_title" > HISTORY </span>
+          </div>
           <section className="other_text">
-              <strong> Some other section </strong>
-              <p> Seaspire Maritime is committed to providing ship management services of the highest quality while adding value to our stakeholders, our people and the society. </p>
+              <strong> History </strong>
+              <p> Seaspire Maritime was formed in 2014 with a purpose of investing in and operating dry cargo bulk carriers. It took delivery of its first vessel (“MV Baltic Spire” ex- “Baltic ID”) on October 2014. In August 2016, Seaspire took delivery of its second vessel (“MV Saronic Spire” ex- “CS Salina”). One year later in June 2017 it took delivery of the third addition to its fleet (“MV Ionian Spire” ex “CS Ocean).  </p>
           </section>
         </div>
 
