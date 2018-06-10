@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import SlideOne from './slide_one';
 import SlideTwo from './slide_two';
 import SlideThree from './slide_three';
+import SlideFour from './slide_four';
 import RightButton from './rightButton';
 import LeftButton from './leftButton';
 
@@ -17,12 +18,12 @@ class Slider extends Component {
   };
   componentDidUpdate = () => {
     console.log(this.state.slideCounter);
-    if (this.state.slideCounter < 1) { this.setState({ slideCounter: 3}) };
-    if (this.state.slideCounter > 3) { this.setState({ slideCounter: 1}) };
+    if (this.state.slideCounter < 1) { this.setState({ slideCounter: 4}) };
+    if (this.state.slideCounter > 4) { this.setState({ slideCounter: 1}) };
   }
   renderSlides = () => {
     let sections = [];
-    for (let i=0; i < 3; i++) {
+    for (let i=0; i < 4; i++) {
       sections.push(<SlideOne key={i} />)
     return sections
     }
@@ -34,13 +35,12 @@ class Slider extends Component {
     return (
       <div className='slider'>
         <div className='sliderContainer'
-          style={{
-            height: '780px',
-            // transform: `translateY(${translateValue}px)`,
+          style={{ backgroundColor: '#AFBDC5',          
             transition: 'backgroundImage 2s ease-out'}} >
           {slideCounter === 1 ? <SlideOne /> : null }
           {slideCounter === 2 ? <SlideTwo  /> : null }
           {slideCounter === 3 ? <SlideThree  /> : null }
+          {slideCounter === 4 ? <SlideFour  /> : null }
         </div>
           <RightButton nextPic={ this.nextPic } />
           <LeftButton previousPic={ this.previousPic } />
